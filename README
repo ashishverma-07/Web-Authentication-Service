@@ -1,0 +1,8 @@
+Ashish Verma
+B00665794
+
+After running npn init, kindly run the program using:
+node options.js [ -t|--auth-time AUTH_TIME ] [ -d|--ssl-dir SSL_DIR ] PORT
+
+The auth request creates an authentication token and passed in the body of the response. 
+The authentication token should be copied manually and should be pasted for the subsequent get requests authorization bearer header.
