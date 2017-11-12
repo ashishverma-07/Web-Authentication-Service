@@ -1,7 +1,7 @@
 Ashish Verma
 B00665794
 
-After running npn init, kindly run the program using:
+After running npm init, kindly run the program using:
 node options.js [ -t|--auth-time AUTH_TIME ] [ -d|--ssl-dir SSL_DIR ] PORT
 
 The auth request creates an authentication token and passed in the body of the response. 
