@@ -1,4 +1,4 @@
-Aims of This Project
+AIM:
 The aims of this project are as follows:
 
 To build a authentication web-service.
