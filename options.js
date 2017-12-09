@@ -1,25 +1,12 @@
 #!/usr/bin/env nodejs
-'use strict';
 
+'use strict';
+//ashish verma
 const assert = require('assert');
 const path = require('path');
 const process = require('process');
 
 const minimist = require('minimist')
-
-const https = require('https');
-const express = require('express');
-const app = express();
-var fs = require("fs");
-
-
-const mongo = require('mongodb').MongoClient;
-const users = require('./model/users');
-const model = require('./model/model');
-const server = require('./server/server');
-
-const DB_URL = 'mongodb://localhost:27017/users';
-
 
 const OPTS = [
   ['t', 'auth-time' ],
@@ -46,7 +33,7 @@ function getOptions(argv) {
     if (k === '_') continue;
     if (opts0.indexOf(k) < 0) {
       console.error(`bad option '${k}'`);
-      usage(argv[1]);getOptionsgetOptions
+      usage(argv[1]);
     }
   }
   return {
@@ -64,25 +51,5 @@ if (!module.parent) {
   console.log(getOptions(process.argv));
 }
 
-const optsCmd = getOptions(process.argv);
-const port = optsCmd.port;
-const sslDir = optsCmd.sslDir;
-const authTime = optsCmd.authTimeout;
-console.log(sslDir);
 
-let KEY_PATH;
-let CERT_PATH;
-KEY_PATH = sslDir + "/key.pem";
-CERT_PATH = sslDir + "/cert.pem";
 
-https.createServer({
-  key: fs.readFileSync(KEY_PATH),
-  cert: fs.readFileSync(CERT_PATH),
-}, app).listen(port);
-
-mongo.connect(DB_URL).
-    then(function (db) {
-    const model1 = new model.Model(db);
-    server.serve(app,port,model1,authTime);
-   }).
-  catch((e) => console.error(e));

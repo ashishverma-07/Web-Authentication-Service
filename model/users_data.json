@@ -1,27 +1,13 @@
 [
-  {
-    "_id" : "5a03a9ae5a1c931b5f4e7116",
-    "name" : "Gail Huff",
-    "gender" : "female"
-}
-{
-    "_id" : "5a03a9aec89b1be09c4d4285",
-    "name" : "Faith Frost",
-    "gender" : "female"
-}
-{
-    "_id" : "5a03a9ae29ff14eb72563cdc",
-    "name" : "Woods Guthrie",
-    "gender" : "male"
-}
-{
-    "_id" : "5a03a9ae6c9ab0fbcc1a9fbf",
-    "name" : "Herminia Beasley",
-    "gender" : "female"
-}
-{
-    "_id" : "5a03a9aebc6a9dc7479f4302",
-    "name" : "Villarreal Fields",
-    "gender" : "male"
-}
+  { "id": "averma7@example.com",
+    "firstName": "ashish",
+    "lastName": "verma",
+    "dateOfBirth": "1994-06-22"
+  },
+  { "id": "sgupta@example.com",
+    "firstName": "shubham",
+    "lastName": "gupta",
+    "dateOfBirth": "1994-03-04"
+  }
+  
 ]
